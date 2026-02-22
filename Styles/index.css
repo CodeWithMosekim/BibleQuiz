@@ -375,4 +375,68 @@ footer a:hover {
   }
 }
 
+/* =========================
+   FINAL MOBILE FIXES
+   ========================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR FIX */
+  nav {
+    position: relative; /* removes fixed overlap */
+    padding: 10px 15px;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  /* NAV LINKS */
+  nav ul.nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* DROPDOWN FIX */
+  .dropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 5px;
+  }
+
+  /* HERO SECTION FIX */
+  .hero-section {
+    margin-top: 0;
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .hero-text {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  /* OPTIONAL: Disable video on mobile (recommended) */
+  .bg-video {
+    display: none;
+  }
+
+  
+
+  /* SECTION PADDING FIX */
+  .story-section,
+  .year-teams {
+    padding: 30px 15px;
+  }
+
+  /* TEXT SIZING */
+  .story-text p,
+  .year-card p {
+    font-size: 14px;
+  }
+}
+
+
 
