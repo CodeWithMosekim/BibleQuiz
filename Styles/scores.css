@@ -298,3 +298,80 @@
   gap: 20px;
 }
 
+/* =========================
+   MOBILE SIDEBAR + PAGE FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* ---- BODY CLEANUP ---- */
+  body {
+    padding: 12px;
+  }
+
+  /* ---- MENU BUTTON ---- */
+  .menu-btn {
+    top: 12px;
+    left: 12px;
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  /* ---- SIDEBAR ---- */
+  .sidebar {
+    width: 220px;
+    left: -220px;
+    padding-top: 70px;
+  }
+
+  .sidebar ul li a {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  /* ---- PAGE TITLES ---- */
+  .page-title {
+    font-size: 2rem;
+    margin-top: 60px; /* avoids menu overlap */
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  /* ---- TABLE RESPONSIVE FIX ---- */
+  .location,
+  .top-ten {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  /* ---- QUIZ BUTTONS ---- */
+  .quiz-center {
+    min-height: auto;
+  }
+
+  .button-quiz {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .button-quiz button {
+    width: 100%;
+    max-width: 260px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  /* ---- POPUP FIX ---- */
+  .popup-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 15px;
+  }
+}
+
+
