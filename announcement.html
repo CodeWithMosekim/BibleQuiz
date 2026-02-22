@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="Styles/announcement.css">
+</head>
+<body>
+
+<div class="announcement-wrapper">
+    <div class="announcement-row">
+
+        <div class="announcement-card slide-in">
+            <span class="badge">Verses</span>
+            <h3>Continue checking verses</h3>
+            <p class="date">Memory verses Sheet is due</p>
+            <p class="message">15th March is the last day for Verses.</p>
+        </div>
+
+        <div class="announcement-card slide-in delay-1">
+            <span class="badge">Update</span>
+            <h3>T-shirt sizing is over</h3>
+            <p class="date">Make sure everyone is sized in your team</p>
+            <p class="message"></p>
+        </div>
+
+        <div class="announcement-card slide-in delay-2">
+            <span class="badge">Reminder</span>
+            <h3>Quiz 2</h3>
+            <p class="date">Is on March 1st </p>
+            <p class="message">Study Chapter 5 to 8.</p>
+        </div>
+
+   
+
+    </div>
+</div>
+<div class="video-background">
+    <video autoplay muted loop id="bg-video">
+        <source src="pics/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+ </div>
+
+ <!--Side bare-->
+<!-- Sidebar Toggle Button -->
+<div class="menu-btn" onclick="toggleSidebar()">
+    ☰
+  </div>
+  
+ <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html"><span class="icon">🏠</span> Home</a></li>
+      <li><a href="announcement.html"><span class="icon">📄</span> Announcement</a></li>
+      <li><a href="scores.html"><span class="icon">🏆</span> Scores</a></li>
+    </ul>
+  </div>
+  <script>
+     function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

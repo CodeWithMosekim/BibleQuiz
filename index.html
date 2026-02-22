@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Quizzing 2026</title>
+  <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="header">Bible Quizzing <span>2026</span></a>
+    <ul class="nav-links">
+      <li><a href="#" id="areaLink">Area ▼</a>
+        <div id="areaDropdown" class="dropdown">
+          <a href="bethesda.html">Bethesda</a>
+          <a href="kenduiwa.html">Kenduiwa</a>
+          <a href="mosop.html">Mosop</a>
+        </div>
+      </li>
+      <li><a href="announcement.html">Announcement</a></li>
+      <li><a href="scores.html">Scores</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <video autoplay muted loop class="bg-video">
+      <source src="pics/background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text glass-box">
+      <h1>Welcome to Bible Quizzing <span>2026</span></h1>
+      <p>Think you know your Bible? Let's find out!</p>
+      <p>Level up your Faith — it's more than a quiz, it's a journey through God's Word</p>
+    </div>
+
+  </section>
+
+  <section class="year-teams">
+    <h2>Themes by Year</h2>
+    <div class="year-grid">
+      <!-- Year 2026 -->
+      
+        <div class="year-card year-2026 ">
+          <img src="pics/LOGO 2 BG-removed.png" alt="Team 2023 Logo">
+          <h3>Bible quizing 2026 </h3>
+          <h4>Studying:Luke 1-10</h4>
+          <p><strong>Theme Verse:</strong> "But the Angle said to them"Do not be affraid
+            i bring you good news of great joy that will be for all the people"</p>
+            <h4>Luke 2:10</h4>
+            <br>
+          <p><strong>Theme:</strong> Habari njema kwa watu wote</p>
+        </div>
+      
+      <!-- Year 2025 -->
+      <div class="year-2025">
+        <div class="year-card ">
+          <img src="pics/LOGO 2 BG-removed.png" alt="Team 2023 Logo">
+          <h3>Bible quizing 2025 </h3>
+          <h4>Studying:Genesis </h4>
+          <p><strong>Theme Verse:</strong> "But the Angle said to them"Do not be affraid
+            i bring you good news of great joy that will be for all the people"</p>
+            <h4>Luke 2:10</h4>
+            <br>
+          <p><strong>Theme:</strong> Meant for Good</p>
+        </div>
+       </div>
+  
+    
+      
+      <!-- Add more years as needed -->
+    </div>
+  </section>
+  
+
+  <!-- STORY SECTIONS -->
+  <main>
+    <section class="story-section">
+      <div class="story-image">
+        <img src="pics/MAPS-removebg-preview.png" alt="Bible Quiz">
+      </div>
+      <div class="story-text glass-box">
+        <h2>Discover the Word</h2>
+        <p>We are  in the 21st year of Bible quiz.It started in the year 2005.There are several locations where they are doing bible quizing.<br>
+         Tenwek Bethesda, Mosop and keduiwa. Kenduiwa started recently participating.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-section reverse">
+      <div class="story-text glass-box">
+        <h2>Leaders</h2>
+        <p> As from 2025 to now Julia and Moses have been the main leaders of bible quizing</p>
+      </div>
+      <div class="story-image">
+        <img src="pics/j__m-removebg-preview.png" alt="Quiz Leaders">
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-image">
+        <img src="pics/community.jpg" alt="Community">
+      </div>
+      <div class="story-text glass-box">
+        <h2>Connect & Learn</h2>
+        <p>Join a community of believers, share insights, and learn together. Our platform encourages teamwork and discussion, making Bible learning fun and interactive.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 Bible Quizzing. All Rights Reserved.</p>
+      <p>Follow us on: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">Twitter</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const areaLink = document.getElementById("areaLink");
+    const dropdown = document.getElementById("areaDropdown");
+
+    areaLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!areaLink.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

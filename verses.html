@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verses | Bible Quiz Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f6f8fa; margin:0; padding:20px; }
+    h1 { text-align: center; color: #333; margin-bottom: 30px; }
+    .team-table { margin-bottom: 40px; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+    th { background-color: #3498db; color: white; }
+    tr:hover { background-color: #f1f1f1; }
+    .team-info { margin-bottom: 10px; text-align: left; }
+  </style>
+</head>
+<body>
+
+<h1 id="pageTitle">Verses</h1>
+
+<div id="versesContainer">
+  <!-- Tables will be generated here -->
+</div>
+
+<script>
+  // Sample data (replace with DB query later)
+  const teamsData = [
+    {
+      teamId: 1,
+      teamName: "Bethesda Upper",
+      teamColor: "Blue",
+      coach: "John Doe",
+      assistant: "Mary Kim",
+      members: [
+        { name: "John", verse214:"✔", verse345:"❌", verse1025:"✔" },
+        { name: "Mary", verse214:"✔", verse345:"✔", verse1025:"✔" },
+        { name: "Kim", verse214:"✔", verse345:"✔", verse1025:"❌" }
+      ]
+    },
+    {
+      teamId: 2,
+      teamName: "Bethesda Lower",
+      teamColor: "Red",
+      coach: "Jane Coach",
+      assistant: "Kim Assist",
+      members: [
+        { name: "Alice", verse214:"✔", verse345:"❌", verse1025:"✔" },
+        { name: "Bob", verse214:"✔", verse345:"✔", verse1025:"✔" },
+        { name: "Tom", verse214:"✔", verse345:"✔", verse1025:"❌" }
+      ]
+    }
+  ];
+
+  // Read area and division from URL
+  const params = new URLSearchParams(window.location.search);
+  const area = params.get("area") || "unknown area";
+  const division = params.get("division") || "unknown division";
+
+  document.getElementById("pageTitle").textContent = 
+    `${area.replace('-', ' ')} - ${division.charAt(0).toUpperCase() + division.slice(1)} Verses`;
+
+  const container = document.getElementById("versesContainer");
+
+  // Filter teams by area and division
+  const filteredTeams = teamsData.filter(t => t.teamName.toLowerCase().includes(area) && t.teamName.toLowerCase().includes(division));
+
+  filteredTeams.forEach(team => {
+    const table = document.createElement("table");
+    table.className = "team-table";
+
+    // Add team info as header row
+    const headerRow = `
+      <tr>
+        <th colspan="4">${team.teamName} | Color: ${team.teamColor} | Coach: ${team.coach} | Assistant: ${team.assistant}</th>
+      </tr>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>2:14</th>
+        <th>3:45</th>
+        <th>10:25</th>
+      </tr>
+    `;
+    table.innerHTML = headerRow;
+
+    // Add member rows
+    team.members.forEach((member, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index+1}</td>
+        <td>${member.name}</td>
+        <td>${member.verse214}</td>
+        <td>${member.verse345}</td>
+        <td>${member.verse1025}</td>
+      `;
+      table.appendChild(row);
+    });
+
+    container.appendChild(table);
+  });
+</script>
+
+</body>
+</html>

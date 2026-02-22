@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Styles/scores.css">
+    </head>
+    <body>
+        <!--Side bare-->
+        <!-- Sidebar Toggle Button -->
+        <div class="menu-btn" onclick="toggleSidebar()">
+            ☰
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+            <li>Area ▼
+                <a href="bethesda.html">Bethesda</a>
+                <a href="kenduiwa.html">kenduiwa</a>
+                <a href="mosop.html">Mosop</a>
+            </li>
+            <li><a href="index.html"><span class="icon">🏠</span> Home</a></li>
+            <li><a href="announcement.html"><span class="icon">📄</span> Announcement</a></li>
+            <li><a href="scores.html"><span class="icon">🏆</span> Scores</a></li>
+            </ul>
+        </div>
+
+        <!--Score data-->
+
+        <h1 class="page-title">📖 Bible Quiz Championship Results</h1>
+        <p class="page-subtitle">
+          Kenduiwa • Bethesda • Mosop
+        </p>
+
+
+  <!-- Navigation Links -->
+  
+
+    <!--Quiz where-->
+<!-- Quiz Section Centered -->
+<div class="quiz-center">
+  <div class="button-quiz">
+    <button onclick="location.href='Quiz 1.html'">Quiz 1</button>
+    <button onclick="location.href='Quiz 2.html'">Quiz 2</button>
+    <button onclick="location.href='Quiz 3.html'">Quiz 3</button>
+  </div>
+</div>
+
+   
+ 
+
+ 
+  
+    
+
+  <script>
+        function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+        }
+    
+        function openPopup(place) {
+        const popup = document.getElementById("popup");
+        const body = document.getElementById("popup-body");
+
+        body.innerHTML = document.getElementById(place + "-content").innerHTML;
+        popup.style.display = "block";
+        }
+
+        function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        }
+
+
+  </script>
+
+    </body>
+</html>
