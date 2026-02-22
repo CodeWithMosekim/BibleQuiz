@@ -419,10 +419,7 @@ footer a:hover {
   }
 
   /* OPTIONAL: Disable video on mobile (recommended) */
-  .bg-video {
-    display: none;
-  }
-
+ 
   
 
   /* SECTION PADDING FIX */
@@ -437,6 +434,7 @@ footer a:hover {
     font-size: 14px;
   }
 }
+
 
 
 
