@@ -253,4 +253,126 @@ footer a:hover {
   backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 16px;
+
+}
+
+/*Newly added8*/
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+@media (max-width: 768px) {
+
+  /* -------- NAVBAR -------- */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav .header {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+  }
+
+  /* Dropdown */
+  .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  /* -------- HERO SECTION -------- */
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .bg-video {
+    object-fit: cover;
+  }
+
+  .hero-text {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* -------- YEAR / THEMES SECTION -------- */
+  .year-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .year-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .year-card img {
+    max-width: 120px;
+    margin: auto;
+  }
+
+  /* -------- STORY SECTIONS -------- */
+  .story-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .story-section.reverse {
+    flex-direction: column;
+  }
+
+  .story-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .story-text {
+    padding: 15px;
+  }
+
+  .story-text h2 {
+    font-size: 20px;
+  }
+
+  .story-text p {
+    font-size: 14px;
+  }
+
+  /* -------- FOOTER -------- */
+  footer {
+    text-align: center;
+    padding: 15px;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 5px;
+  }
 }
