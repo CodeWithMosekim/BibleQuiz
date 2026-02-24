@@ -31,13 +31,23 @@
   <h2>Overall Summary – Kenduiwa • Bethesda • Mosop</h2>
 
   <!-- Navigation Links -->
-  <p style="text-align:center;">
-    <div class="button-quiz">
+ <div class="quiz-center">
+  <div class="button-quiz">
+
+    <!-- Main toggle button -->
+    <button class="main-quiz-btn" onclick="toggleQuizzes()">
+      📘 Select Quiz
+    </button>
+
+    <!-- Hidden quiz buttons -->
+    <div class="quiz-options" id="quizOptions">
       <button onclick="location.href='Quiz 1.html'">Quiz 1</button>
       <button onclick="location.href='Quiz 2.html'">Quiz 2</button>
       <button onclick="location.href='Quiz 3.html'">Quiz 3</button>
     </div>
-  </p>
+
+  </div>
+</div>
 
   <!-- FIRST VIEW: TOP TEAMS -->
   <h1>Quiz 2</h1>
@@ -254,9 +264,13 @@
         function closePopup() {
         document.getElementById("popup").style.display = "none";
         }
-
+        function toggleQuizzes() {
+          document.getElementById("quizOptions")
+            .classList.toggle("active");
+        }
 
   </script>
 
     </body>
+
 </html>
