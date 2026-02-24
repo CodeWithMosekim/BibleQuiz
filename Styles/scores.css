@@ -1,207 +1,59 @@
- /* Sidebar container */
- .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hidden initially */
-    width: 250px;
-    height: 100vh;
-    background: #1e293b;
-    color: white;
-    padding-top: 80px;
-    transition: 0.4s ease;
-    overflow-y: auto;
-    z-index: 999;
-  }
-  
-  /* Sidebar visible */
-  .sidebar.active {
-    left: 0;
-  }
-  
-  /* Sidebar links */
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 20px 0;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: #cbd5e1;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-  
-  .sidebar ul li a:hover {
-    background: #334155;
-  }
-  
-  /* Icon style */
-  .icon {
-    font-size: 22px;
-    margin-right: 12px;
-  }
-  
-  /* Hamburger button */
-  .menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 28px;
-    background: #1e293b;
-    color: white;
-    padding: 10px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: 0.3s;
-  }
-  
-  .menu-btn:hover {
-    background: #334155;
-  }
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
 
-  /*Addition for the main body page*/
-  body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    padding: 20px;
-  }
-  h1, h2, h3 {
-    text-align: center;
-    color: #2c3e50;
-  }
-  .location {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  th {
-    background: #2c3e50;
-    color: white;
-  }
-  .top-ten {
-    background: #eaf2f8;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  .badge {
-    font-weight: bold;
-    color: #d35400;
-  }
-  /*pop up model*/
-  .popup {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .popup-content {
-    background: white;
-    width: 90%;
-    max-width: 900px;
-    margin: 5% auto;
-    padding: 20px;
-    border-radius: 12px;
-    position: relative;
-  }
-  
-  .close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .button-quiz{
-    height: 300px;
-    width: 500px;
-    background-color: green;
-    align-items: center;
-    justify-content: center;
-  }
-  .button-quiz button{
-    width: 90px;
-    height: 30px;
-    font-size: 19px;
-    font-weight: bold;
-    
-  }
-  
-  /*global smooth touch*/
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    animation: fadeIn 0.6s ease-in-out;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  
-    background:
-      linear-gradient(
-        rgba(255, 255, 255, 0.92),
-        rgba(36, 29, 29, 0.92)
-      ),
-      linear-gradient(135deg, #e0f2fe, #f0fdf4);
-  
-    background-attachment: fixed;
-  }
-  
-  .page-title {
-    text-shadow: 0 0 15px rgba(147,51,234,0.35);
-  }
-  .page-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-align: center;
-    margin: 20px 0 10px;
-    background: linear-gradient(45deg, #4f46e5, #9333ea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 1px;
-  }
-  
-  .page-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #475569;
-    margin-bottom: 35px;
-  }
-    
-  
-/*side bar*/
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(36,29,29,0.92)),
+    linear-gradient(135deg, #e0f2fe, #f0fdf4);
+
+  background-attachment: fixed;
+}
+
+/* Sidebar */
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  padding-top: 80px;
   background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: white;
+  transition: 0.4s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
@@ -209,33 +61,72 @@
   transform: translateX(6px);
 }
 
-.sidebar ul li a {
-  transition: all 0.3s ease;
+/* Icons */
+.icon {
+  font-size: 22px;
+  margin-right: 12px;
 }
 
-
-/*hamburger button*/
+/* Hamburger button */
 .menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background: #1e293b;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .menu-btn:hover {
+  background: #334155;
   transform: scale(1.08) rotate(3deg);
 }
 
+/* Page titles */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(147,51,234,0.35);
 
-/*Quiz buttons*/
+  background: linear-gradient(45deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 35px;
+}
+
+/* Quiz section */
+.quiz-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
 .button-quiz {
-  height: auto;
   width: 100%;
   max-width: 500px;
-  margin: 40px auto;
   padding: 25px;
-  background: linear-gradient(135deg, #000000, #22c55e);
   border-radius: 18px;
   display: flex;
   justify-content: center;
   gap: 20px;
+
+  background: linear-gradient(135deg, #000000, #22c55e);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -243,13 +134,14 @@
   width: 110px;
   height: 45px;
   font-size: 18px;
-  color: #fff;
   font-weight: bold;
+  color: #fff;
+
   border: none;
   border-radius: 25px;
   cursor: pointer;
+
   background: linear-gradient(45deg, #000000, #fde047);
-  
   transition: all 0.3s ease;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
@@ -263,115 +155,50 @@
   transform: scale(0.95);
 }
 
+/* Popup modal */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
 
-/*animations*/
+.popup-content {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  animation: popIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.quiz-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh; /* centers vertically without hiding title */
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-.button-quiz {
-  display: flex;
-  gap: 20px;
-}
-
-/* =========================
-   MOBILE SIDEBAR + PAGE FIX
-   ========================= */
-@media (max-width: 768px) {
-
-  /* ---- BODY CLEANUP ---- */
-  body {
-    padding: 12px;
-  }
-
-  /* ---- MENU BUTTON ---- */
-  .menu-btn {
-    top: 12px;
-    left: 12px;
-    font-size: 24px;
-    padding: 8px 12px;
-  }
-
-  /* ---- SIDEBAR ---- */
-  .sidebar {
-    width: 220px;
-    left: -220px;
-    padding-top: 70px;
-  }
-
-  .sidebar ul li a {
-    font-size: 16px;
-    padding: 10px 16px;
-  }
-
-  /* ---- PAGE TITLES ---- */
-  .page-title {
-    font-size: 2rem;
-    margin-top: 60px; /* avoids menu overlap */
-  }
-
-  .page-subtitle {
-    font-size: 1rem;
-  }
-
-  /* ---- TABLE RESPONSIVE FIX ---- */
-  .location,
-  .top-ten {
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 600px;
-  }
-
-  /* ---- QUIZ BUTTONS ---- */
-  .quiz-center {
-    min-height: auto;
-  }
-
+/* Mobile tweaks */
+@media (max-width: 600px) {
   .button-quiz {
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .button-quiz button {
-    width: 100%;
-    max-width: 260px;
-    height: 44px;
-    font-size: 16px;
-  }
-
-  /* ---- POPUP FIX ---- */
-  .popup-content {
-    width: 95%;
-    margin: 10% auto;
-    padding: 15px;
+    align-items: center;
+    justify-content: center;
   }
 }
-
-
