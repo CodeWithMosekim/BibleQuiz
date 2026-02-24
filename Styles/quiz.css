@@ -55,6 +55,104 @@
     color: #d1d7e1; /* dark enough to read */
     text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* optional subtle shadow */
   }
+/* Hide quiz options by default */
+.quiz-options {
+  display: none;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* When active */
+.quiz-options.active {
+  display: flex;
+}
+
+/* Main quiz button style */
+.main-quiz-btn {
+  background: linear-gradient(45deg, #2563eb, #9333ea);
+  color: white;
+  font-size: 18px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.main-quiz-btn:hover {
+  transform: scale(1.05);
+}
+h1,h2 {
+  text-align: center;
+}
+/* ===== Small mobile screens ===== */
+@media (max-width: 480px) {
+
+  body {
+    padding: 12px;
+  }
+
+  /* Page titles */
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar ul li a {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  /* Hamburger button */
+  .menu-btn {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  /* Quiz buttons container */
+  .button-quiz {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .button-quiz button {
+    width: 85px;
+    height: 38px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+
+  /* Popup */
+  .popup-content {
+    width: 95%;
+    margin: 15% auto;
+    padding: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .button-quiz button {
+    width: 75px;
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+}
+
   
 
   
+
